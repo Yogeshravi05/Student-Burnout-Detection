@@ -56,8 +56,7 @@ conditions = [
 ]
 
 choices = ["Low", "Medium", "High"]
-data["Burnout_Level"] = np.select(conditions, choices)
-
+data["Burnout_Level"] = np.select(conditions, choices, default="Medium")
 # Dropout Probability (Binary Target)
 data["Dropout"] = np.where(
     (data["Attendance_Percentage"] < 60) |
@@ -133,3 +132,4 @@ print("\n=== Sample Student Prediction ===")
 print("Burnout Level:", burnout_prediction)
 print("Dropout Probability:", round(dropout_prediction, 3))
 print("Risk Score (0-100):", risk_score)
+
