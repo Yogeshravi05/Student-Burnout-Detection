@@ -2,6 +2,9 @@
 Behavioural Analytics DA Project
 Early Detection of Student Burnout & Dropout Risk
 
+pip install -r requirements.txt
+python main.py
+
 Dataset Type: Synthetic
 
 Number of Records: 1000
